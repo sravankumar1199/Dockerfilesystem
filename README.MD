@@ -72,8 +72,10 @@ docker.io means docker hub
 * FROM = Create a new build stage from a base image
 * RUN = using for create configration and install packages
 * CMD = using to start container 
-* LABEL = using for tags or filtering perpose it is key value pair
-
+* LABEL = using for tags or filtering perpose it is key value pair ## docker inspect [image-id]
+LABEL means if it has 100 images to find perticalar image so that's why we use label and tags ##
+LABEL IS = docker images --filter label=COURSE=DevOps
+*
 
 ### what is virtual machines and virtualization 
 * vm is ubuntu and centos,aws linux, mocOS these are VMs
