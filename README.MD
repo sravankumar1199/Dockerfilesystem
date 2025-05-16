@@ -75,14 +75,21 @@ Dockerfile is declarative way for creating images.
 we can build the images and we can push to any docker repository.
 * FROM is declaration
 * RUN is configration and installing packages
-* CMD is starts for the image like nginx
+* CMD is starts for the image like nginx  ## whenever cmd starts images that time container creates automaticlly
+####### interview question is what is the different between run and cmd or from and run ? ###
 
 ## create github repo 
 * Push docker folder to github
-* clone to docker installed server
+* clone to docker installed server ## git clone and git pull
 
 
 ## How build docker image
 
 [a] docker build -t image-name:version . ## [.] means current directory
 docker build -t cmd:nginx .
+
+
+## How to access nginx in server 
+docker run -p 9999:80 fe33cb7f7039 
+docker run -p 9999:80 imageid of nginx
+
