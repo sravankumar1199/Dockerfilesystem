@@ -100,7 +100,13 @@ we can build the images and we can push to any docker repository.
 docker build -t cmd:nginx .
 
 
-## How to access nginx in server 
-* docker run -p 9999:80 fe33cb7f7039 
-* using this command docker run -p 9999:80 imageid of nginx
-
+## How to access github to server
+* Declar in vsc
+* push to github
+* clone to docker installed server
+* go to directroy like cd cmd/ and git pull
+* docker build -t sravan:v1 . ## v1 means version
+* docker images and copy image id
+* docker inspect [image-d] means shows the information about imagee
+* docker run -d -p 9999:80 image-id
+* docker ps
