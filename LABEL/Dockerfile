@@ -1,0 +1,4 @@
+FROM almalinux:8
+LABEL COURSE=DEVOPS \
+      TRAINER=SRAVAN \
+      DURATION=30hrs

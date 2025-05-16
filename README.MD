@@ -55,15 +55,24 @@ docker.io means docker hub
 ## docker run ## pull image,create,start ##
 
 ### docket commands 
-* docker rm 'docker ps -a -q' -> removing all containers
-* docker rmi 'docker images -a -q'  -> removing all images
-* docker rmi imageid -> removes particular image
-* docker run -> pull image,create,start commadn is docker run -p 80:80 nginx
-* docker rm containerid # deleting container
-* docker rmi imageid # deleting imageid 
-## 
+* To display the available images = docker images
+* To pull the image from docker hub. if you mention version it will pull the latest version by default = docker pull <image-name>:version
+* To create container out of image = docker create imageid
+* To display running containers = docker ps
+* To display all the containers = docker pa -a
+* To start container = docker start container-id
+* To pull,create and start the container with single command = docker run <image-name>:version
+* By default docker containers run in the background attach to the screen = docker run -d [image:name]:[version]
+* To stop container = docker stop containerid
+* To remove the container.if it is running docker rm -f [container-id] or docker rm [container-id] 
+* To remove images = docker rmi [imd-id]
 * docker run -p <host-port>:<container-port>: image name
-* 
+
+### Docker instructions 
+* FROM = Create a new build stage from a base image
+* RUN = using for create configration and install packages
+* CMD = using to start container 
+* LABEL = using for tags or filtering perpose it is key value pair
 
 
 ### what is virtual machines and virtualization 
