@@ -90,6 +90,6 @@ docker build -t cmd:nginx .
 
 
 ## How to access nginx in server 
-[*]docker run -p 9999:80 fe33cb7f7039 
-[*] using this command docker run -p 9999:80 imageid of nginx
+* docker run -p 9999:80 fe33cb7f7039 
+* using this command docker run -p 9999:80 imageid of nginx
 
