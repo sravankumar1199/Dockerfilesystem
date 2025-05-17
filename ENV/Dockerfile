@@ -1,0 +1,5 @@
+FROM almalinux
+ENV NAME=SRAVAN \
+    AGE=22 /
+    ADDRESS=HYD
+    DURATION=20
