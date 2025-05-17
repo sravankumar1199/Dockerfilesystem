@@ -75,7 +75,29 @@ docker.io means docker hub
 * LABEL = using for tags or filtering perpose it is key value pair ## docker inspect [image-id]
 LABEL means if it has 100 images to find perticalar image so that's why we use label and tags ##
 LABEL IS = docker images --filter label=COURSE=DevOps
-*
+* EXPOSE = using for example, ## 80/tcp and expose means if someone using your image how they know your image port so that's why we declaring port and using expose instration ## 
+* ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
+* COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy. 
+
+
+
+
+
+
+
+### ENV instruation 
+* configar vsc and push to github nest open docker installed server in superputty then git pull 
+* go cd ENV and [ docker build -t env:v1 . ] building images copy images id
+* [ docker run image-id env ] it means container run and exists because of using this command 
+* instead of using this command its always container is running [ docker run -d -p 8888:80 nginx ]
+* for example using [ docker run ubuntu ping google.com ] it always pinging ubuntu package from google.com = hostOS is centos and cantainer-OS is almalinux whenever i used this command 1. docker pull image from docker hub and crates conatainer request goes through google.com
+* for example [ docker run ubuntu pinb -c 10 google.com ] it runs 10 packs from google.com and stops
+* [ docker run image-id sleep 100 ] after 100 seconds container stops
+* [ docker run -d image-id sleep 100 ] -d means it runs background 100 seconds its stops
+* [ docker exec -it df6a4f4v4af464f4a4 bash ] you can enter into container before 100 seconds but after runs sleep command you ger id and paste it in before of bash
+* [ docker run almalinux ping google.com ] always installing packs means images from google.com it stops ctrl+ c it stops
+* 
+
 
 ### what is virtual machines and virtualization 
 * vm is ubuntu and centos,aws linux, mocOS these are VMs
