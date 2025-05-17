@@ -156,3 +156,4 @@ force fully removed [ docker rmi -f imageid ] -f means force fully removed
 * again pulling image from my docker hub account 
 command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command checks images is in local then it will pull on docker hub 
 * docker stop container-id ## container stops
+######
