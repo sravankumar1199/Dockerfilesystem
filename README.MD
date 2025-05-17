@@ -15,10 +15,11 @@
 * inside loptop if we install hypervisor then our loptop runs all operations systems like ubuntu virtual machine ,centos virtual machine 
 * inside virtual machine we can multiple containers
 * virtual machine means inside physical server we has hypervisor it can run multiple virtual machines
-* old and days we have cart has one vm and catalogue has one vm but now days inside vm we have container like cart has one container,catalogue has one container
+* old and days we have cart has one vm and catalogue has one vm but now a days inside vm we have container like cart has one container,catalogue has one container
 * container everything in image format
 * image nothing but OS, application runtime,package requirement,and application
 * for example centos in ami it is long and centos in docker image it is light
+
 ## Installing Docker in server
 * create instance in aws console
 * google search centos install docker, which favour you are using like redhat,linux so search in google
@@ -37,16 +38,18 @@ command is
 [i] exit and again logout and login in superputty
 [j] docker ps 
 [k] docker images means it shows list of images in server
+
 ## dockerhub search in google here you get images but these images created someone
 * docker pull nginx ## nginx means image ## if i want to install version so docker pull nginx:perl
 docker.io means docker hub
 * docker images 
+
 ## container means when you run images you get container # conatainer is run image of the instance
 ######## creating container
 * docker create imageid  # docker ps means only running container it shows # all container docker ps -a
 * docker start containerid ## means starts container 
 * docker stop containerid ## means stops conatainer
-## After installed started nginx container so how to access using port forwording ##
+## After installed and started nginx container so how to access using port forwording ##
 * Every server and container have 0 to 65535 ports
 * vm throug forwarding port to container
 * inside server it has port interface you can select any number but container what image you installed in container you give that number like 90 is interface and 80 is nginx number
@@ -64,7 +67,7 @@ docker.io means docker hub
 * To pull,create and start the container with single command = docker run <image-name>:version
 * By default docker containers run in the background attach to the screen = docker run -d [image:name]:[version]
 * To stop container = docker stop containerid
-* To remove the container.if it is running docker rm -f [container-id] or docker rm [container-id] 
+* To remove the container.if it is running [ docker rm -f [container-id] ] or docker rm [container-id] 
 * To remove images = docker rmi [imd-id]
 * docker run -d -p <host-port>:<container-port>: image name
 * 
@@ -80,7 +83,7 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * EXPOSE = using for example, ## 80/tcp and expose means if someone using your image how they know your image port so that's why we declaring port and using expose instration ## 
 * ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
 * COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy.
-
+* ADD = ADD is same like COPY but ADD is copy files from github and interet 
 
 ### ENV instruation 
 * configar vsc and push to github nest open docker installed server in superputty then git pull 
@@ -115,7 +118,8 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * [ docker run -d image-id sleep 60 ] ### can enter into container before 60 seconds
 * [ docker ps ] all running container and copy container id
 * [ docker exec -it container-id bash ] entering into container ## cd /tmp/,ls -l,sunny.txt this is into the container
-* 
+
+### ENTERPOINT 
 
 
 ### what is virtual machines and virtualization 
