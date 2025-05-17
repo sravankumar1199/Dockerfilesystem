@@ -119,7 +119,18 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * [ docker ps ] all running container and copy container id
 * [ docker exec -it container-id bash ] entering into container ## cd /tmp/,ls -l,sunny.txt this is into the container
 
-### ENTERPOINT 
+### ENTRYPOINT 
+* entrypoint it is same like COPY instration BUT in entrypoint we are passing like this RUN echo "WELCOME TO DOCKER IT WRITTEN BY SRAVANKUMAR" > /usr/share/nginx/html/index.html
+* in CMD instration like docker run -p 80:80 cmd:v1 ping google.com ## But CMD can overridden but ENTRYPOINT can't be overridden that's why ENTRYPOINT is safe
+* docker build -t sunny:v2 . 
+* docker run sunny:v2 google.com ## entrypoint whatever we have written in vso that only ping in docker
+
+###### CMD VS ENTRYPOINT ###########
+* CMD command can be overridden by any command
+* ENTRYPOINT can not be overridden
+* you can not overridden ENTRYPOINT, if you try to do it will and append to entrypoint.
+* if user is not giving any options ,CMD can supply arguments to ENTRYPOINT
+* user can always overridden cmd through terminal
 
 
 ### what is virtual machines and virtualization 
