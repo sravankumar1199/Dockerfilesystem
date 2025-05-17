@@ -67,6 +67,7 @@ docker.io means docker hub
 * To remove the container.if it is running docker rm -f [container-id] or docker rm [container-id] 
 * To remove images = docker rmi [imd-id]
 * docker run -d -p <host-port>:<container-port>: image name
+* 
 * [ docker exec -it container-id bash ] means enter into the container 
 
 ### Docker instructions 
@@ -107,6 +108,13 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * singel server we can run multiple containers by using different container ports
 
 ## ADD annd COPY both are same process but ADD have more features
+* ADD its same like a COPY but ADD have little bit more features like copy files and copy internet files from directory github
+* create file in copy directory and push to github and pull to docker installed server
+* [ docker build -t add:v1 . ] creating image 
+* [ docker images ] copy image-id
+* [ docker run -d image-id sleep 60 ] ### can enter into container before 60 seconds
+* [ docker ps ] all running container and copy container id
+* [ docker exec -it container-id bash ] entering into container ## cd /tmp/,ls -l,sunny.txt this is into the container
 * 
 
 
