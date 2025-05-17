@@ -66,7 +66,7 @@ docker.io means docker hub
 * To stop container = docker stop containerid
 * To remove the container.if it is running docker rm -f [container-id] or docker rm [container-id] 
 * To remove images = docker rmi [imd-id]
-* docker run -p <host-port>:<container-port>: image name
+* docker run -d -p <host-port>:<container-port>: image name
 
 ### Docker instructions 
 * FROM = Create a new build stage from a base image
@@ -77,12 +77,7 @@ LABEL means if it has 100 images to find perticalar image so that's why we use l
 LABEL IS = docker images --filter label=COURSE=DevOps
 * EXPOSE = using for example, ## 80/tcp and expose means if someone using your image how they know your image port so that's why we declaring port and using expose instration ## 
 * ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
-* COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy. 
-
-
-
-
-
+* COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy.
 
 
 ### ENV instruation 
@@ -96,7 +91,19 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * [ docker run -d image-id sleep 100 ] -d means it runs background 100 seconds its stops
 * [ docker exec -it df6a4f4v4af464f4a4 bash ] you can enter into container before 100 seconds but after runs sleep command you ger id and paste it in before of bash
 * [ docker run almalinux ping google.com ] always installing packs means images from google.com it stops ctrl+ c it stops
-* 
+
+## COPY INSTRUATION 
+* once refer copy directroy 
+* copy directroy push to github
+* docker installed server open in superputty 
+* in server clone copy directory in server and cd copy/, and git pull
+* docker build -t copy:v1 . ## docker build ot image-id:vesion . ## means creating images pulling from docker hub
+* docker images ## copy image id
+* docker run -d -p 9000:80 imaged-id  ## 
+* docker ps ## means checking container is running or not
+* docker stop container-id ## stoping container
+* copy server public ip and paste in new tab like 3.83.145.247:9000
+* singel server we can run multiple containers by using different container ports
 
 
 ### what is virtual machines and virtualization 
@@ -132,3 +139,17 @@ docker build -t cmd:nginx .
 * docker inspect [image-d] means shows the information about imagee
 * docker run -d -p 9999:80 image-id
 * docker ps
+
+### How to create docker hub account and pushing files to docker hub and pulling images to server ###
+* google search docker hub and create docker hub account 
+* [ cd COPY/ ] and [ docker login ] 
+* user - sravankumartudi0099 password - 
+* docker images
+* docker push username/imagename:version means urlname means docker.io
+before pushing image to docker hub ## we have to tage the image then its pushed to docker hub
+command = docker tag copy:v1 docker.io/sravankumar0099/copy:version
+* docker push sravankumar0099/copy:v1 ## images pushes to docker hub
+* docker logout 
+* docker rm -f 'docker ps -a -q' ## removing all containers
+* docker rmi 'docker images -a -q'
+force fully removed [ docker rmi -f imageid ] -f means force fully removed
