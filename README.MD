@@ -153,3 +153,6 @@ command = docker tag copy:v1 docker.io/sravankumar0099/copy:version
 * docker rm -f 'docker ps -a -q' ## removing all containers
 * docker rmi 'docker images -a -q'
 force fully removed [ docker rmi -f imageid ] -f means force fully removed
+* again pulling image from my docker hub account 
+command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command checks images is in local then it will pull on docker hub 
+* docker stop container-id ## container stops
