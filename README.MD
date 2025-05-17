@@ -67,6 +67,7 @@ docker.io means docker hub
 * To remove the container.if it is running docker rm -f [container-id] or docker rm [container-id] 
 * To remove images = docker rmi [imd-id]
 * docker run -d -p <host-port>:<container-port>: image name
+* [ docker exec -it container-id bash ] means enter into the container 
 
 ### Docker instructions 
 * FROM = Create a new build stage from a base image
@@ -104,6 +105,9 @@ LABEL IS = docker images --filter label=COURSE=DevOps
 * docker stop container-id ## stoping container
 * copy server public ip and paste in new tab like 3.83.145.247:9000
 * singel server we can run multiple containers by using different container ports
+
+## ADD annd COPY both are same process but ADD have more features
+* 
 
 
 ### what is virtual machines and virtualization 
