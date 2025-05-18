@@ -99,6 +99,7 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
 * COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy.
 * ADD = ADD is same like COPY but ADD is copy files from github and interet 
+* USER = 
 
 ### ENV instruation 
 * configar vsc and push to github nest open docker installed server in superputty then git pull 
@@ -147,6 +148,8 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * if user is not giving any options ,CMD can supply arguments to ENTRYPOINT
 * user can always overridden cmd through terminal
 
+## USER 
+* 
 
 ### what is virtual machines and virtualization 
 * vm is ubuntu and centos,aws linux, mocOS these are VMs
@@ -198,4 +201,8 @@ force fully removed [ docker rmi -f imageid ] -f means force fully removed
 * again pulling image from my docker hub account 
 command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command checks images is in local then it will pull on docker hub 
 * docker stop container-id ## container stops
-######
+
+### DOCKER FLOW INTERVIEW QUENTION ##
+* FIRST WRITE A DOCKER FILE
+* BUILD IMAGE
+* NEXT USING DOCKER RUN AND CREATING IMAGE
