@@ -230,4 +230,8 @@ command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command
 * 
 
 ### DOCKER LAYERS 
-*  
+* docker executes layer wise 
+* instrucation wise layer executes and its executes step by step
+* layer 1 docker creates container,inside container layer executes 2 instruation and layer 3 docker is running 3 instruation
+* docker follow intermediate containers like layer 1 is 1 container and layer 2 is container 2
+* if layer 2 container is created then layer 1 container deleted
