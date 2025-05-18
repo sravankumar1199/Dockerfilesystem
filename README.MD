@@ -107,6 +107,10 @@ so using workdir entering into container terminal direct enter into /tmp directo
 ARG = [a] it will pass the variables at the build time...[b] example:we have almalinux version 7,8,9,
 * interview quention what is the differnt betweent ARG VS ENV
 * ARG variables only work in build time,but ENV variables can work in build as well as runtime in container once refer in ENV AND ARG directories
+* [a] docker build -t arg:v1 . ## it shows error because not provided veriable
+like docker build -t arg:v1 --build-arg version=9 . and docker build -t arg:v1 --build-arg version=7 . version changes but same image is called ARG.
+* [b] in arg directory passing variables throug env once refer arg directory.
+* [c] ARG can run build but ENV can run build time as well as runtime
 
 ### ENV instruation 
 * configar vsc and push to github nest open docker installed server in superputty then git pull 
@@ -218,3 +222,12 @@ command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command
 * FIRST WRITE A DOCKER FILE
 * BUILD IMAGE
 * NEXT USING DOCKER RUN AND CREATING IMAGE
+
+### DOCKER ARCHITECTURE
+* Docker client means Docker commands
+* Docker doemon responsible for managing the lifecycle of containers. Ex= docker daemon checking images in local if not then it pull images from docker hub.
+* Docker client interact with docker daemon first checks image from local if not then docker daemon pull image from docker hub and create the image and creates the containers and run
+* 
+
+### DOCKER LAYERS 
+*  

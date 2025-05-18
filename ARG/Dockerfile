@@ -14,3 +14,29 @@ FROM almalinux:${version:-8}
 ARG COURSE
 ARG TRAINER
 RUN echo "course is: ${COURSE}, trainer is: ${TRAINER}"
+## docker build -t arg:v1 --build-arg COURSE=DEVOPS --build-arg TRAINER=SRAVAN ##
+
+### INTERVIEW QUENTIONS 
+# what is ARG VS ENV
+# ARG varibles work in build time but ENV variables can work build time and as well as runtime.
+
+### Enter into container type env
+# enter env ## env means to showes inside the container
+
+
+####
+ARG version
+FROM almalinux:${version:-9}
+ARG COURSE
+ARG TRAINER
+ENV COURSE=${COURSE}
+ENV TRAINER=${TRAINER}
+RUN echo "course is: ${COURSE}, trainer is: ${TRAINER}"
+## docker build -t arg:v1 --build-arg COURSE=DevOps --build-arg TRAINER=SRAVAN .
+
+## arg can run build and env can run build and runtime
+## but using env couse=${course} this variables passing throught env to the inside arg container
+## use this command in docker 
+# docker build -t arg:v1 --build-arg COURSE=Devops --build-arg TRAINER=sravan .
+# docker exec -it arg:v1 bash 
+# enter [ env ] to apperes all variables inside the container
