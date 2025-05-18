@@ -104,6 +104,9 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * USER = user restrict root access to container and user improve security to containers
 * WORKDIR = in workdir directory cd command not works instead of workdir.
 so using workdir entering into container terminal direct enter into /tmp directory not /tmp what you mention in workdir directory refer workdir directory.
+ARG = [a] it will pass the variables at the build time...[b] example:we have almalinux version 7,8,9,
+* interview quention what is the differnt betweent ARG VS ENV
+* ARG variables only work in build time,but ENV variables can work in build as well as runtime in container once refer in ENV AND ARG directories
 
 ### ENV instruation 
 * configar vsc and push to github nest open docker installed server in superputty then git pull 
