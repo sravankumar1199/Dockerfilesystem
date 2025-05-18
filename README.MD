@@ -6,12 +6,14 @@
 * Now we are using microserver for roboshop project
 * In microservers roboshop project divided into types like user,cart,catalogue,payments,shipping so that's why we using images and containers so we no need long servers
 * docker and kubernetes is best playform for using microservers
+* Ex VM is ec2 and inside VM hypervisor is Docker and inside VM can run multiple containers and all containers and server data stores in VM is ec2
 
 ### later VM virtual machines
 * virtual machine is a revolutionary technology back in time from the perspective of applications.Entire cloud computing VM's are based of virtualization.
 
 ## vm architecture 
 * In our loptops we are using different operations systems like ubuntu,centos using because of hypervisor
+* VM is aws EC2 is a virtual machine
 * inside loptop if we install hypervisor then our loptop runs all operations systems like ubuntu virtual machine ,centos virtual machine 
 * inside virtual machine we can multiple containers
 * virtual machine means inside physical server we has hypervisor it can run multiple virtual machines
@@ -149,7 +151,11 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * user can always overridden cmd through terminal
 
 ## USER 
-* 
+* created file in USER directory in vsc but that file is in root user
+* Ex every container has root user but if root access so all containers data will manuplati that is not safe that's why USER restrict the root user to images and containers.
+** how can you improve the security in docker container = by default docker container gets the root access underline server but we will take care of it we will restrict root access to containers 
+* Docker use's vm storage so every container and server data stores in vm's VM means EC2 are there aws servers
+* adding user and restricting  root access to containers ##
 
 ### what is virtual machines and virtualization 
 * vm is ubuntu and centos,aws linux, mocOS these are VMs
