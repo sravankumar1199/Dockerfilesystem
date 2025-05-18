@@ -101,7 +101,9 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
 * COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy.
 * ADD = ADD is same like COPY but ADD is copy files from github and interet 
-* USER = 
+* USER = user restrict root access to container and user improve security to containers
+* WORKDIR = in workdir directory cd command not works instead of workdir.
+so using workdir entering into container terminal direct enter into /tmp directory not /tmp what you mention in workdir directory refer workdir directory.
 
 ### ENV instruation 
 * configar vsc and push to github nest open docker installed server in superputty then git pull 
@@ -156,6 +158,7 @@ LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 ** how can you improve the security in docker container = by default docker container gets the root access underline server but we will take care of it we will restrict root access to containers 
 * Docker use's vm storage so every container and server data stores in vm's VM means EC2 are there aws servers
 * adding user and restricting  root access to containers ##
+* refer user and user1 directory
 
 ### what is virtual machines and virtualization 
 * vm is ubuntu and centos,aws linux, mocOS these are VMs
