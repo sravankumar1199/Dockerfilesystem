@@ -25,19 +25,18 @@
 * google search centos install docker, which favour you are using like redhat,linux so search in google
 * copy server ip and login into superputty
 ######## install docker in server
-[a] sudo su -
-[b] sudo yum install -y yum-utils
-[c] sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-[d] sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-[e] sudo systemctl start docker
-[f] sudo systemctl enable docker
-[g] exit
-[h] after installed docker then docker group also installed so you need to add user to group
+* sudo su -
+* sudo yum install -y yum-utils
+* sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+* sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+* sudo systemctl start docker
+* sudo systemctl enable docker
+* after installed docker then docker group also installed so you need to add user to group
 command is 
-[*] sudo usermod -aG docker centos ## centos is user so which user you installed you give that user
-[i] exit and again logout and login in superputty
-[j] docker ps 
-[k] docker images means it shows list of images in server
+* sudo usermod -aG docker centos ## centos is user so which user you installed you give that user
+* exit and again login in superputty
+* docker ps 
+* docker images means it shows list of images in server
 
 ## dockerhub search in google here you get images but these images created someone
 * docker pull nginx ## nginx means image ## if i want to install version so docker pull nginx:perl
@@ -45,17 +44,18 @@ docker.io means docker hub
 * docker images 
 
 ## container means when you run images you get container # conatainer is run image of the instance
-######## creating container
+######## creating container ##########
 * docker create imageid  # docker ps means only running container it shows # all container docker ps -a
 * docker start containerid ## means starts container 
 * docker stop containerid ## means stops conatainer
+* docker run image-id ## pull image,create,start 
+
 ## After installed and started nginx container so how to access using port forwording ##
 * Every server and container have 0 to 65535 ports
 * vm throug forwarding port to container
 * inside server it has port interface you can select any number but container what image you installed in container you give that number like 90 is interface and 80 is nginx number
 * server public ip and 80 means nginx ## 223.36.225./80 
 * first request send to hostport and hostport sends to container port and container sends requests to hostport
-## docker run ## pull image,create,start ##
 
 ### docket commands 
 * To display the available images = docker images
@@ -72,6 +72,21 @@ docker.io means docker hub
 * docker run -d -p <host-port>:<container-port>: image name
 * 
 * [ docker exec -it container-id bash ] means enter into the container 
+* [ docker run image-id sleep 100 ] after 100 seconds container stops
+* [ docker run -d image-id sleep 100 ] -d means it runs background 100 seconds its stops
+* [ docker exec -it df6a4f4v4af464f4a4 bash ] you can enter into container before 100 seconds but after runs sleep command you ger id and paste it in before of bash
+* docker run -d -p 9000:80 imaged-id  ## 
+* [ docker build -t add:v1 . ] creating image 
+* [ docker exec -it container-id bash ] entering into container ## cd /tmp/,ls -l,sunny.txt this is into the container
+* docker run sunny:v2 google.com
+* docker inspect [image-d] means shows the information about imagee
+* docker run -d -p 9999:80 image-id
+* docker rm -f 'docker ps -a -q' ## removing all containers
+* docker rmi 'docker images -a -q' ## removing all images
+* force fully removed [ docker rmi -f imageid ] -f means force fully removed
+* again pulling image from my docker hub account 
+command = docker run -d -p 55555:80 sravankumar0099/copy:v1 ## this pull command checks images is in local then it will pull on docker hub 
+* docker login and docker logout
 
 ### Docker instructions 
 * FROM = Create a new build stage from a base image
@@ -79,7 +94,7 @@ docker.io means docker hub
 * CMD = using to start container 
 * LABEL = using for tags or filtering perpose it is key value pair ## docker inspect [image-id]
 LABEL means if it has 100 images to find perticalar image so that's why we use label and tags ##
-LABEL IS = docker images --filter label=COURSE=DevOps
+LABEL IS = [ docker images --filter label=COURSE=DevOps ]
 * EXPOSE = using for example, ## 80/tcp and expose means if someone using your image how they know your image port so that's why we declaring port and using expose instration ## 
 * ENV = northing but environment instruation ## for example mongodb project mongodb need cart configar that configar we pass through ENV like key and value format.
 * COPY = it is same like variables means but create copy folder inside folder create file like dockerfile, index.html and  configar in index.html file and copy to dockerfile file in copy directroy.
